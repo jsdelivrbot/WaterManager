@@ -1,0 +1,32 @@
+.container{ 
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 100%;
+ }
+
+.gaugeList {
+
+display: flex;
+flex-direction: row;
+flex-flow: row wrap;
+justify-content: space-between;
+
+}
+
+.floor{
+
+display: flex;
+flex-direction: row;
+flex-flow: row wrap;
+justify-content: space-between;
+
+}
+.gaugeItem {
+	border-radius: 10%;
+	background:#8F8F8F;
+}
+
+.gaugeTitle{
+	background: #2581C4; 
+	color: white;
+}
