@@ -9,24 +9,69 @@
 display: flex;
 flex-direction: row;
 flex-flow: row wrap;
-justify-content: space-between;
+justify-content: left;  
 
 }
 
 .floor{
 
+
 display: flex;
 flex-direction: row;
 flex-flow: row wrap;
-justify-content: space-between;
+justify-content: left;
+
 
 }
+
+.floor:nth-child(even)
+{
+	background: #745cb0;
+}
+
+.floor:nth-child(odd)
+{
+	background: #a483f6;
+}
+
+
 .gaugeItem {
 	border-radius: 10%;
-	background:#8F8F8F;
+	color: white;
 }
 
-.gaugeTitle{
-	background: #2581C4; 
+.gaugeTitle
+{
+	 color: white;
+	 text-align: center;
+}
+
+
+.buildingTitle
+{
+	border-bottom: solid 2px black ; 
+
+}
+
+
+.floorAcrostic
+{
+	writing-mode: vertical-lr;
 	color: white;
+	text-orientation: upright;
+	padding-top: 0.5em; 
+}
+
+.controlPanel
+{
+	width: 10em;
+	background: #2eb04b;
+	border-radius: 10px; 
+	padding:5px;
+	z-index: 10; 
+	top: 10px;
+	right:10px;
+	position: fixed;
+	text-align: right; 
+
 }

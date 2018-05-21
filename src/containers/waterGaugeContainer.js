@@ -13,28 +13,10 @@ class waterGaugeContainer extends Component {
 
 
 	renderGaugeList(building){
-			
-		this.props.gaugeList.filter(ele=> ele.building === building)
-						.reduce((newlist,ele)=>{
-							let floor = ele.floor;
-								if(!newlist[floor])
-								{
-									newlist[floor]=[];
-								}
-								newlist[floor].push(ele);
-								return newlist},[])
-						.map( floor => {
-							
-							let components = floor.map(ele=>{return (<WaterGauge key={ele.id} {...ele}/>);});	
-							return (
-								<div className="floor" >
-									{ components}
-								</div>
-								)}
-							)
-									
+												
 		return (
-			<div><div> BATIMENT {building}</div> 
+			<div>
+			<div className="buildingTitle"> BATIMENT {building}</div> 
 			{this.props.gaugeList.filter(ele=> ele.building === building)
 						.reduce((newlist,ele)=>{
 							let floor = ele.floor;
@@ -49,7 +31,7 @@ class waterGaugeContainer extends Component {
 							let components = floor.map(ele=>{return (<WaterGauge key={ele.id} {...ele}/>);});	
 							return (
 								<div className="floor" key={"floor"+index} >
-									<div>{ (index === 0) ? "REZ" : "ETAGE"+ index }</div>
+									<div className="floorAcrostic" >{ (index === 0) ? "REZ" : "ETAGE"+ index }</div>
 									{ components}
 								</div>
 								)}
