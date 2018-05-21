@@ -23,25 +23,26 @@ class controlPanel extends Component {
   		this.setState({ [event.target.name]: event.target.value}, this.setId);
   	}
 
-  	setId(){
-  	       let selectedGauge = this.props.gaugeAddresses.filter(gauge =>{ 
+  	setId()
+  	{
+        let selectedGauge = this.props.gaugeAddresses.filter(gauge =>{ 
   				return ( gauge.building == this.state.building && 
   						gauge.floor == this.state.floor &&
   						gauge.apartment == this.state.apartment); 
 
-   			});
-  	       if (selectedGauge.length == 1)
-  	       {
-  	       		console.log(selectedGauge);
-  	       		this.setState({id:selectedGauge[0].id}) ;
-  	        }
-  	       else 
-  	       	{
-  	       		this.setState({id:0} ); 
- 			}
+   		});
+  	    if (selectedGauge.length == 1)
+  	    {
+  	   		this.setState({id:selectedGauge[0].id}) ;
+  	    }
+  	    else 
+  	    {
+  	   		this.setState({id:0} ); 
+ 		}
   	}
 
-	render() {
+	render() 
+	{
 
     return (
     	<div className="controlPanel"  > 
@@ -86,4 +87,4 @@ function mapStateToProps(state){
 
 
 
-export default connect(mapStateToProps,actions)(controlPanel);
+export default connect( mapStateToProps, actions )(controlPanel);
